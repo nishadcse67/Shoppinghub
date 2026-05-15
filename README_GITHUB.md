@@ -8,7 +8,7 @@
 
 ---
 
-## 🌟 প্রধান বৈশিষ্ট্য
+## 🌟 বৈশিষ্ট্য
 
 ### 👥 গ্রাহক ফিচার
 - ✅ রেসপন্সিভ প্রোডাক্ট গ্রিড (1-4 কলাম)
@@ -87,13 +87,7 @@ shopping-hub/
 ├── index.html
 ├── package.json
 ├── vite.config.ts
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-├── .gitignore
-├── README.md
-├── DEPLOYMENT_GUIDE.md
-└── QUICK_GITHUB_UPLOAD.md
+└── README.md
 ```
 
 ---
@@ -121,15 +115,21 @@ shopping-hub/
 
 ### GitHub Pages এ ডিপ্লয় করুন
 
-1. **Repository Settings** → **Pages** এ যান
-2. **Source**: Deploy from a branch
-3. **Branch**: main → Folder: / (root)
-4. **Save** ক্লিক করুন
-5. অপেক্ষা করুন ২-৫ মিনিট
-
-আপনার ওয়েবসাইট লাইভ হবে:
+#### 1. GitHub Pages সক্রিয় করুন
 ```
-https://yourusername.github.io/shopping-hub/
+Repository Settings → Pages → Source: Deploy from a branch
+Branch: main → Folder: /docs (or root)
+```
+
+#### 2. বিল্ড করুন
+```bash
+npm run build
+```
+
+#### 3. dist/ ফোল্ডার আপলোড করুন
+```bash
+# অথবা
+git subtree push --prefix dist origin gh-pages
 ```
 
 ### Vercel এ ডিপ্লয় করুন
@@ -187,14 +187,6 @@ MIT License - আপনার ব্যবহারের জন্য মুক
 - [ ] অর্ডার ট্র্যাকিং
 - [ ] এসএমএস নোটিফিকেশন
 - [ ] অ্যানালিটিক্স ড্যাশবোর্ড
-
----
-
-## 📚 ডকুমেন্টেশন
-
-- **[QUICK_GITHUB_UPLOAD.md](QUICK_GITHUB_UPLOAD.md)** - দ্রুত GitHub এ আপলোড (৫ মিনিটে)
-- **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** - সম্পূর্ণ ডিপ্লয়মেন্ট গাইড
-- **[GITHUB_CHECKLIST.md](GITHUB_CHECKLIST.md)** - আপলোড চেকলিস্ট
 
 ---
 
